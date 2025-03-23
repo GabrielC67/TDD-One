@@ -1,6 +1,7 @@
 package rocks.zipcode;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * EXERCISE 1: StringUtils
@@ -27,8 +28,13 @@ public class StringUtils {
     }
     
     public static int countOccurrences(String str, char c) {
-        // Your implementation here
-        return 0;
+        int counter = 0;
+        for (char s : str.toCharArray()) {
+            if (Objects.equals(c, s)) {
+                counter++;
+            }
+        }
+        return counter;       // return 0;
     }
     
     public static boolean isPalindrome(String str) {
