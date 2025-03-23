@@ -18,8 +18,8 @@ public class StringUtils {
     
     public static String reverse(String str) {
         // Your implementation here
-        String[] strArr = reverseString(str);
-        return String.join("", strArr);
+        String[] revStrArr = reverseString(str);
+        return String.join("", revStrArr);
     }
 
 
@@ -36,8 +36,8 @@ public class StringUtils {
     public static boolean isPalindrome(String str) {
         // Your implementation here
         // Note: Ignoring case and non-alphanumeric characters
-        String[] strArr = reverseString(str);
-        String palindrome = String.join("",strArr);
+        String[] revString = reverseString(str);
+        String palindrome = String.join("", revString);
         StringBuilder newPalindrome = new StringBuilder();
 
         appendedStr(palindrome, newPalindrome);
