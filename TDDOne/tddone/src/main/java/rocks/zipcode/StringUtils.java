@@ -39,26 +39,27 @@ public class StringUtils {
         String[] strArr = reverseString(str);
         String palindrome = String.join("",strArr);
         StringBuilder newPalindrome = new StringBuilder();
-        for (int j = 0; j < palindrome.length(); j++) {
-            boolean b1 = Character.isDigit(palindrome.charAt(j));
-            boolean b2 = Character.isAlphabetic(palindrome.charAt(j));
-//
-            if (b1 || b2){
-                newPalindrome.append(palindrome.charAt(j));
-            }
-        }
+
+        appendedStr(palindrome, newPalindrome);
+
         StringBuilder newStrBuilder = new StringBuilder();
-        for (int k = 0; k < str.length(); k++) {
-            boolean b3 = Character.isDigit(str.charAt(k));
-            boolean b4 = Character.isAlphabetic(str.charAt(k));
-            if (b3 || b4){
-                newStrBuilder.append(str.charAt(k));
-            }
-        }
+        appendedStr(str, newStrBuilder);
+
         String newStr = newStrBuilder.toString();
         String palinStr = newPalindrome.toString();
 
         return newStr.equalsIgnoreCase(palinStr);
+    }
+
+    private static void appendedStr(String str, StringBuilder newStr) {
+        for (int i = 0; i < str.length(); i++) {
+            boolean b1 = Character.isDigit(str.charAt(i));
+            boolean b2 = Character.isAlphabetic(str.charAt(i));
+//
+            if (b1 || b2){
+                newStr.append(str.charAt(i));
+            }
+        }
     }
 
     private static String[] reverseString(String str) {
