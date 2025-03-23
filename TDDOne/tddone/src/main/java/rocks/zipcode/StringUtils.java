@@ -43,6 +43,7 @@ public class StringUtils {
         appendedStr(palindrome, newPalindrome);
 
         StringBuilder newStrBuilder = new StringBuilder();
+
         appendedStr(str, newStrBuilder);
 
         String newStr = newStrBuilder.toString();
@@ -55,7 +56,6 @@ public class StringUtils {
         for (int i = 0; i < str.length(); i++) {
             boolean b1 = Character.isDigit(str.charAt(i));
             boolean b2 = Character.isAlphabetic(str.charAt(i));
-//
             if (b1 || b2){
                 newStr.append(str.charAt(i));
             }
