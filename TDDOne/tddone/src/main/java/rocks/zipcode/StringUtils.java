@@ -1,5 +1,8 @@
 package rocks.zipcode;
-/** 
+
+import java.util.Arrays;
+
+/**
  * EXERCISE 1: StringUtils
  * 
  * Implement the StringUtils class to make all tests pass.
@@ -15,7 +18,12 @@ public class StringUtils {
     
     public static String reverse(String str) {
         // Your implementation here
-        return null;
+        String[] strArr = new String[str.length()];
+        String[] strSplit = str.split("");
+        for(int i = str.length() - 1, j = 0; i >= 0; i--, j++){
+            strArr[j] = strSplit[i];
+        }
+        return String.join("", strArr);
     }
     
     public static int countOccurrences(String str, char c) {
