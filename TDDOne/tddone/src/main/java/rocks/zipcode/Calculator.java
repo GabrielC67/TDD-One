@@ -13,27 +13,31 @@ public class Calculator {
     
     public int add(int a, int b) {
         // Your implementation here
-        return 0;
+        return a + b;
     }
     
     public int subtract(int a, int b) {
         // Your implementation here
-        return 0;
+        return a - b;
     }
     
     public int multiply(int a, int b) {
         // Your implementation here
-        return 0;
+        return a * b;
     }
     
     public double divide(int a, int b) {
         // Your implementation here
-        return 0.0;
+        if (b == 0){
+            throw new ArithmeticException("Cannot divide by zero");
+        }
+        double difference = (double) a / (double) b;
+        return difference;
     }
     
     public double power(int base, int exponent) {
         // Your implementation here
-        return 0.0;
+        return Math.pow((double) base, (double) exponent);
     }
 }
 
