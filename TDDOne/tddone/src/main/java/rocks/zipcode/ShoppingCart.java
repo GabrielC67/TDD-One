@@ -14,7 +14,7 @@ public class ShoppingCart {
     private final List<Item> items;
     private final double taxRate;
     
-    public ShoppingCart(double taxRate) {
+    public ShoppingCart(double taxRate) {//Constructor
         this.items = new ArrayList<>();
         this.taxRate = taxRate;
     }
@@ -22,10 +22,6 @@ public class ShoppingCart {
     public void addItem(Item item) {
         items.add(item);
     }
-    // Item newItem = new Item(...);
-    // sc.addItem(newItem);
-    // Item expected = s.getItem(sc.getItemCount()-1);
-    // assertequal(expected, newItem);
     
     public Item getItem(int idx) {
         return items.get(idx);
@@ -64,7 +60,7 @@ public class ShoppingCart {
         private final double price;
         private int quantity;
         
-        public Item(String name, double price, int quantity) {
+        public Item(String name, double price, int quantity) {//Constructor
             if (price < 0) {
                 throw new IllegalArgumentException("Price cannot be negative");
             }
