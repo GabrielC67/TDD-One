@@ -102,4 +102,26 @@ class ShoppingCartTest {
 
         assertEquals(total , cart.getTotal());
     }
+
+    @Test
+    public void emptyCartTest1(){
+        cart.clearCart();
+        assertEquals(0, cart.getItemCount());
+    }
+
+    @Test
+    public void testNegativePrices(){
+        assertThrows(IllegalArgumentException.class, () -> {
+            ShoppingCart.Item priceNeg1 = new ShoppingCart.Item("Pork Loin", -3.99, 2);
+            cart.addItem(priceNeg1);
+        });
+    }
+
+    @Test
+    public void testZeroQuantity(){
+        assertThrows(IllegalArgumentException.class, () -> {
+            ShoppingCart.Item qtyNegative = new ShoppingCart.Item("Yogurt", 2.99, 0);
+            cart.addItem(qtyNegative);
+        });
+    }
 }
