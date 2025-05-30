@@ -69,7 +69,7 @@ class ShoppingCartTest {
         cart.addItem(item3);
         cart.addItem(item4);
 
-        cart.removeAllItems();
+        cart.clearCart();
 
         assertEquals(0, cart.getItemCount());
     }

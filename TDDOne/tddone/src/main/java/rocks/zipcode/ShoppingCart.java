@@ -31,9 +31,7 @@ public class ShoppingCart {
         items.remove(item);
     }
 
-    public void removeAllItems(){
-        items.clear();
-    }
+
     
     public int getItemCount() {
         return items.size();
